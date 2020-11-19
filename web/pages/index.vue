@@ -3,7 +3,7 @@
     <div>
       <Logo />
       <h1 class="title">
-        temp
+        nnkthai git auto build
       </h1>
       <div class="links">
         <a
