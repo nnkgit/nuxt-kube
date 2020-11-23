@@ -8,7 +8,7 @@ spec:
   selector:
     matchLabels:
       app: nuxt-kube
-  replicas: 2
+  replicas: 4
   template:
     metadata:
       labels:
@@ -16,6 +16,9 @@ spec:
     spec:
       containers:
         - name: nuxt-kube
-          image: nnkthai/nuxt-kube:latest
+          image: 575551465933.dkr.ecr.ap-southeast-1.amazonaws.com/nuxt-kube:latest
           ports:
             - containerPort: 3000
+      # you must create secret name is regcred.
+      imagePullSecrets:
+        - name: regcred
